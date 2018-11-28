@@ -52,3 +52,6 @@ $RECYCLE.BIN/
 
 ### Git ###
 *.orig
+
+### In Progress Files ###
+extra.html
