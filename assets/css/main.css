@@ -732,7 +732,7 @@
 				width: 3.75em;
 				height: 3.75em;
 				border-radius: 100%;
-				border: solid 1px #c8cccf;
+				border: solid 1px #414F57;
 				line-height: 3.75em;
 				overflow: hidden;
 				text-align: center;
@@ -751,7 +751,7 @@
 
 				ul.icons li a:before {
 					color: #ffffff;
-					text-shadow: 1.25px 0px 0px #c8cccf, -1.25px 0px 0px #c8cccf, 0px 1.25px 0px #c8cccf, 0px -1.25px 0px #c8cccf;
+					text-shadow: 1.25px 0px 0px #414F57, -1.25px 0px 0px #414F57, 0px 1.25px 0px #414F57, 0px -1.25px 0px #414F57;
 				}
 
 				ul.icons li a:hover:before {
@@ -1072,3 +1072,20 @@
     visibility: visible;
     opacity: 1;
 }
+ul.actions li a {
+	width: 21em;
+}
+ul.actions {
+	padding-bottom: 10px;
+}
+.button {
+  text-decoration: none; }
+  .button:before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none !important; }
+  .button:before {
+    float: left; }
