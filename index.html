@@ -6,7 +6,9 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
+		<noscript>
+			<link rel="stylesheet" href="assets/css/noscript.css">
+		</noscript>
 		<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
@@ -20,66 +22,68 @@
 		<!-- And I know I should put them in the root but it just looks so bad -->
 	</head>
 	<body class="is-preload">
-
 		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<section id="main">
-						<header>
-							<span class="avatar"><img src="images/avatar.jpg" alt="David's face"/></span>
-							<h1 id="name">David Frankel</h1>
-							<p>Computer Science | Gender Studies | Theater</p>
-							<h2 id="school-name">Washington University in St. Louis</h2>
-						</header>
-						<hr>
-						<ul class="actions stacked">
-								<li class="links"><a id="letter" class="button"><span class="fas fa-envelope"></span>Email</a></li>
-								<li class="links"><a target="_blank" href="https://drive.google.com/file/d/1lFHLseyu4390Cxd5_dbMNVtgP2U7yBbV/view?usp=sharing" class="button"><span class="fas fa-file"></span>Resume</a></li>
-								<li class="links"><a target="_blank" href="https://github.com/frankeld" class="button"><span class="fab fa-github"></span>GitHub</a></li>
-								<li class="links"><a target="_blank" href="https://www.linkedin.com/in/david-frankel-78528a124/" class="button"><span class="fab fa-linkedin"></span>Linkedin</a></li>
-						</ul>
-						<footer>
-						<hr>
-						<h2>Projects</h2>
-							<ul class="icons">
-								<li class="tooltip"><a target="_blank" href="https://github.com/JackBiggin/ride.fyi/blob/master/README.md" class="fa-car">Ride.fyi</a><span class="tooltiptext">Ride.FYI</span></li>
-								<li class="tooltip"><a target="_blank" href="https://agu.confex.com/agu/fm17/meetingapp.cgi/Paper/234892" class="fa-cloud">AGU Paper</a><span class="tooltiptext">AI Publication</span></li>
-								<li class="tooltip"><a target="_blank" href="https://drive.google.com/file/d/11PJpjcx6fXmk15WkKDdiEdoMjxgYYqAk/view" class="fa-low-vision">Room Navigation Patent</a><span class="tooltiptext">Room Navigation Patent</span></li>
-							</ul>
-						</footer>
-					</section>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="copyright">
-							<li>&copy; David Frankel</li><li>Based On: <a href="http://html5up.net">HTML5UP</a></li>
-						</ul>
-					</footer>
-
-			</div>
-
+		<div id="wrapper">
+			<!-- Main -->
+			<section id="main">
+				<header>
+					<span class="avatar"><img src="images/avatar.jpg" alt="David's face"/></span>
+					<h1 id="name">David Frankel</h1>
+					<p>Computer Science | Gender Studies | Theater</p>
+					<h2 id="school-name">Washington University in St. Louis</h2>
+				</header>
+				<hr>
+				<ul class="actions stacked">
+					<li class="links"><a id="letter" class="button"><span class="fas fa-envelope"></span>Email</a></li>
+					<li class="links"><a target="_blank" href="https://drive.google.com/file/d/1lFHLseyu4390Cxd5_dbMNVtgP2U7yBbV/view?usp=sharing" class="button"><span class="fas fa-file"></span>Resume</a></li>
+					<li class="links"><a target="_blank" href="https://github.com/frankeld" class="button"><span class="fab fa-github"></span>GitHub</a></li>
+					<li class="links"><a target="_blank" href="https://www.linkedin.com/in/david-frankel-78528a124/" class="button"><span class="fab fa-linkedin"></span>Linkedin</a></li>
+				</ul>
+				<footer>
+					<hr>
+					<h2>Projects</h2>
+					<ul class="icons">
+						<li class="tooltip"><a target="_blank" href="https://github.com/JackBiggin/ride.fyi/blob/master/README.md"><span class="fas fa-car"></span>Ride.FYI</a><span class="tooltiptext">Ride.FYI</span></li>
+						<li class="tooltip"><a target="_blank" href="https://agu.confex.com/agu/fm17/meetingapp.cgi/Paper/234892"><span class="fas fa-brain"></span>AGU Paper</a><span class="tooltiptext">AI Publication</span></li>
+						<li class="tooltip"><a target="_blank" href="https://drive.google.com/file/d/11PJpjcx6fXmk15WkKDdiEdoMjxgYYqAk/view"><span class="fas fa-low-vision"></span>Room Navigation Patent</a><span class="tooltiptext">Room Navigation Patent</span></li>
+						<li class="tooltip"><a onclick="theater()"><span class="fas fa-theater-masks"></span>Theater Experience</a><span class="tooltiptext">Theater Experience</span></li>
+					</ul>
+				</footer>
+			</section>
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="copyright">
+					<li>&copy; David Frankel</li>
+					<li>Based On: <a href="http://html5up.net">HTML5UP</a></li>
+				</ul>
+			</footer>
+		</div>
 		<!-- Scripts -->
-			<script>
-				if ('addEventListener' in window) {
-					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
-					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-				}
-			</script>
-			<script>
-				var parts = ["&#102;&#114;&#97;", "&#100;&#97;&#118;", "&#100;&#46;&#99;&#111;&#109;", "&#105;&#100;&#64;&#105;&#99;&#108;&#111;&#117;", "&#110;&#107;&#101;&#108;&#46;"];
-				var email = parts[0] + parts[4] + parts[1] + parts[3] + parts[2];
-				var decodedEmail = htmlDecode(email);
-				document.getElementById("letter").href = htmlDecode("mailto:" + email);
-				// document.getElementById("letter").firstChild.textContent = htmlDecode(email);
-				function htmlDecode(input){
-					var e = document.createElement('div');
-					e.innerHTML = input;
-					return e.childNodes[0].nodeValue;
-				}
-			</script>
+		<script>
+			if ('addEventListener' in window) {
+				window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+				document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+			}
+		</script>
+		<script>
+			var parts = ["&#102;&#114;&#97;", "&#100;&#97;&#118;", "&#100;&#46;&#99;&#111;&#109;", "&#105;&#100;&#64;&#105;&#99;&#108;&#111;&#117;", "&#110;&#107;&#101;&#108;&#46;"];
+			var email = parts[0] + parts[4] + parts[1] + parts[3] + parts[2];
+			var decodedEmail = htmlDecode(email);
+			document.getElementById("letter").href = htmlDecode("mailto:" + email);
+			// document.getElementById("letter").firstChild.textContent = htmlDecode(email);
+			function htmlDecode(input){
+				var e = document.createElement('div');
+				e.innerHTML = input;
+				return e.childNodes[0].nodeValue;
+			}
+			function theater() {
+			  document.getElementById("main").class
+			}
+		</script>
 		<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101061107);</script>
 		<script async src="//static.getclicky.com/js"></script>
-		<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101061107ns.gif" /></p></noscript>
+		<noscript>
+			<p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101061107ns.gif" /></p>
+		</noscript>
 	</body>
 </html>
