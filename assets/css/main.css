@@ -1038,38 +1038,38 @@
 }
 /*Thanks https://www.w3schools.com/howto/howto_css_tooltip.asp*/
 .tooltip {
-    position: relative;
+	position: relative;
 }
 .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: #313f47;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 0.3s;
+	visibility: hidden;
+	width: 120px;
+	background-color: #313f47;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -60px;
+	opacity: 0;
+	transition: opacity 0.3s;
 }
 
 .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
 }
 .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
+	visibility: visible;
+	opacity: 1;
 }
 ul.actions li a {
 	width: 21em;
@@ -1077,7 +1077,20 @@ ul.actions li a {
 ul.actions {
 	padding-bottom: 10px;
 }
+
+/*Update for FontAwesome5*/
 .button span{
 	float: left;
 	line-height: inherit;
+}
+.icons span:not(.tooltiptext) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: inherit;
+	height: inherit;
+	font-size: 1.85rem;
+	line-height: inherit;
+	text-align: center;
+	text-indent: 0;
 }
