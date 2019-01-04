@@ -39,16 +39,29 @@
 					<li class="links"><a target="_blank" href="https://github.com/frankeld" class="button"><span class="fab fa-github"></span>GitHub</a></li>
 					<li class="links"><a target="_blank" href="https://www.linkedin.com/in/david-frankel-78528a124/" class="button"><span class="fab fa-linkedin"></span>Linkedin</a></li>
 				</ul>
-				<footer>
 					<hr>
 					<h2>Projects</h2>
 					<ul class="icons">
 						<li class="tooltip"><a target="_blank" href="https://github.com/JackBiggin/ride.fyi/blob/master/README.md"><span class="fas fa-car"></span>Ride.FYI</a><span class="tooltiptext">Ride.FYI</span></li>
 						<li class="tooltip"><a target="_blank" href="https://agu.confex.com/agu/fm17/meetingapp.cgi/Paper/234892"><span class="fas fa-brain"></span>AGU Paper</a><span class="tooltiptext">AI Publication</span></li>
 						<li class="tooltip"><a target="_blank" href="https://drive.google.com/file/d/11PJpjcx6fXmk15WkKDdiEdoMjxgYYqAk/view"><span class="fas fa-low-vision"></span>Room Navigation Patent</a><span class="tooltiptext">Room Navigation Patent</span></li>
-						<li class="tooltip"><a onclick="theater()"><span class="fas fa-theater-masks"></span>Theater Experience</a><span class="tooltiptext">Theater Experience</span></li>
+						<li class="tooltip"><a onclick="theaterModal()"><span class="fas fa-theater-masks"></span>Theater Experience</a><span class="tooltiptext">Theater Experience</span></li>
+<!-- 							<div id="myModal" class="modal">
+								<div class="modal-content">
+								<p>Some text in the Modal..</p>
+								<span class=" far fa-window-close" onclick="document.getElementById('myModal').style.display = 'none';"></span>
+								</div>
+							</div> -->
 					</ul>
-				</footer>
+			<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
 			</section>
 			<!-- Footer -->
 			<footer id="footer">
@@ -57,6 +70,7 @@
 					<li>Based On: <a href="http://html5up.net">HTML5UP</a></li>
 				</ul>
 			</footer>
+
 		</div>
 		<!-- Scripts -->
 		<script>
@@ -76,9 +90,19 @@
 				e.innerHTML = input;
 				return e.childNodes[0].nodeValue;
 			}
-			function theater() {
-			  document.getElementById("main").class
+			function theaterModal() {
+				document.getElementById('myModal').style.display = "block";
 			}
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+				if (event.target == document.getElementById('myModal')) {
+					document.getElementById('myModal').style.display = "none";
+				}
+			}
+			document.getElementsByClassName("close")[0].onclick = function() {
+				document.getElementById('myModal').style.display = "none";
+			}
+
 		</script>
 		<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101061107);</script>
 		<script async src="//static.getclicky.com/js"></script>
