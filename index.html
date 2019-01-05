@@ -29,7 +29,7 @@
 				<header>
 					<span class="avatar"><img src="images/avatar.jpg" alt="David's face"/></span>
 					<h1 id="name">David Frankel</h1>
-					<p>Computer Science | Gender Studies | Theater</p>
+					<p>Computer Science<br>Gender Studies | Theater</p>
 					<h2 id="school-name">Washington University in St. Louis</h2>
 				</header>
 				<hr>
@@ -45,23 +45,32 @@
 						<li class="tooltip"><a target="_blank" href="https://github.com/JackBiggin/ride.fyi/blob/master/README.md"><span class="fas fa-car"></span>Ride.FYI</a><span class="tooltiptext">Ride.FYI</span></li>
 						<li class="tooltip"><a target="_blank" href="https://agu.confex.com/agu/fm17/meetingapp.cgi/Paper/234892"><span class="fas fa-brain"></span>AGU Paper</a><span class="tooltiptext">AI Publication</span></li>
 						<li class="tooltip"><a target="_blank" href="https://drive.google.com/file/d/11PJpjcx6fXmk15WkKDdiEdoMjxgYYqAk/view"><span class="fas fa-low-vision"></span>Room Navigation Patent</a><span class="tooltiptext">Room Navigation Patent</span></li>
-						<li class="tooltip"><a onclick="theaterModal()"><span class="fas fa-theater-masks"></span>Theater Experience</a><span class="tooltiptext">Theater Experience</span></li>
-<!-- 							<div id="myModal" class="modal">
-								<div class="modal-content">
-								<p>Some text in the Modal..</p>
-								<span class=" far fa-window-close" onclick="document.getElementById('myModal').style.display = 'none';"></span>
-								</div>
-							</div> -->
+						<li class="tooltip"><a onclick="theaterModal(event)"><span class="fas fa-theater-masks"></span>Theater Experience</a><span class="tooltiptext">Theater Experience</span></li>
 					</ul>
-			<div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
-  </div>
+			<!-- Modal -->
+			<div id="theaterModal" class="modal">
+				<div class="modal-content">
+				<span class="close">&times;</span>
+					<h1>Most Recent Experience</h1>
+					<h2>Melancholy Play</h2>
+					<h3>2019 | WashU All Student Theater</h3>
+					<h4>Stage Manager</h4>
 
-</div>
+					<h2>Rocky Horror Show</h2>
+					<h3>2018 | WashU PAD</h3>
+					<h4>Assistant Stage Manager</h4>
+
+					<h2>Arcadia</h2>
+					<h3>2017 | Sidwell Friends School</h3>
+					<h4>Sound Designer</h4>
+
+					<h2>Love Labour's Lost</h2>
+					<h3>2017 | Sidwell Friends School</h3>
+					<h4>Stage Manager &amp; Sound Designer</h4>
+				</div>
+			</div>
+
 			</section>
 			<!-- Footer -->
 			<footer id="footer">
@@ -90,17 +99,19 @@
 				e.innerHTML = input;
 				return e.childNodes[0].nodeValue;
 			}
-			function theaterModal() {
-				document.getElementById('myModal').style.display = "block";
+			function theaterModal(event) {
+				document.getElementById('theaterModal').style.display = "block";
+				event.stopPropagation();
 			}
-			// When the user clicks anywhere outside of the modal, close it
+			// When the user clicks anywhere, close the modal
 			window.onclick = function(event) {
-				if (event.target == document.getElementById('myModal')) {
-					document.getElementById('myModal').style.display = "none";
-				}
+				if (event.target == document.getElementById('theaterModal') || event.target == document.getElementById('wrapper')) {
+					console.log(event.target);
+					document.getElementById('theaterModal').style.display = "none";
+				}	
 			}
 			document.getElementsByClassName("close")[0].onclick = function() {
-				document.getElementById('myModal').style.display = "none";
+				document.getElementById('theaterModal').style.display = "none";
 			}
 
 		</script>
