@@ -1079,7 +1079,7 @@ ul.actions {
 }
 
 /*Update for FontAwesome5*/
-.button span{
+.button span {
 	float: left;
 	line-height: inherit;
 }
