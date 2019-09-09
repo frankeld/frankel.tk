@@ -46,20 +46,48 @@
 					<li class="links"><a id="letter" class="button"><span class="fas fa-envelope"></span>Email</a></li>
 					<li class="links"><a target="_blank" href="https://drive.google.com/file/d/1lFHLseyu4390Cxd5_dbMNVtgP2U7yBbV/view?usp=sharing" class="button"><span class="fas fa-file"></span>Resume</a></li>
 					<li class="links"><a target="_blank" href="https://github.com/frankeld" class="button"><span class="fab fa-github"></span>GitHub</a></li>
-					<li class="links"><a target="_blank" href="https://www.linkedin.com/in/frankeld/" class="button"><span class="fab fa-linkedin"></span>Linkedin</a></li>
+					<li class="links"><a target="_blank" href="https://www.linkedin.com/in/frankeld/" class="button"><span class="fab fa-linkedin"></span>LinkedIn</a></li>
 				</ul>
 					<hr>
-					<h2>Projects</h2>
 					<ul class="icons">
+
+						<h2>Civic Tech</h2>
+
+						<li class="tooltip"><a data-collap="1" class="collapsible"><span class="fas fa-camera"></span>PICTURE Grants</a><span class="tooltiptext">PICTURE Grants</span></li>
+						<li class="tooltip"><a data-collap="2" class="collapsible"><span class="fas fa-flag-usa"></span>Civic Digital Fellowship Demo Day</a><span class="tooltiptext">Civic Digital Fellowship Demo Day</span></li>
+
+						<div id="1" class="content">
+							<div>
+								<h2>PICTURE Grants: Co-Founder</h1>
+								<p>test</p>
+								<a target="_blank" href="https://picturegrants.org" class="button">View Site</a>
+							</div>
+						</div>
+
+						<div id="2" class="content">
+							<div>
+								<h2>2019 Software Engineer Civic Digital Fellow</h1>
+								<!-- <p>test</p> -->
+								<a target="_blank" href="https://github.com/codingitforward/cdfdemoday2019" class="button">View Site</a>
+							</div>
+						</div>
+
+						<h2>Hackathons</h2>
+
 						<li class="tooltip"><a target="_blank" href="https://archhacks.io"><span class="fas fa-laptop-medical"></span>ArchHacks</a><span class="tooltiptext">ArchHacks</span></li>
 						<li class="tooltip"><a target="_blank" href="https://github.com/frankeld/ride.fyi/blob/master/README.md"><span class="fas fa-car"></span>Ride.FYI</a><span class="tooltiptext">Ride.FYI</span></li>
-						<li class="tooltip"><a target="_blank" href="https://agu.confex.com/agu/fm17/meetingapp.cgi/Paper/234892"><span class="fas fa-brain"></span>AGU Paper</a><span class="tooltiptext">AI Publication</span></li>
-
-						<br>
-
 						<li class="tooltip"><a target="_blank" href="https://github.com/frankeld/FitBuds/blob/master/README.md"><span class="fas fa-dumbbell"></span>FitBuds</a><span class="tooltiptext">FitBuds</span></li>
+
+						<h2>Side Hustles</h2>
+						
+						<li class="tooltip"><a onclick="theaterModal(event)"><span class="fas fa-theater-masks"></span>Theater Experience</a><span class="tooltiptext">Theater Production Experience</span></li>
+						<li class="tooltip"><a target="_blank" href="https://safezones.wustl.edu"><span class="fas fa-users"></span>SafeZones Peer Facilitation</a><span class="tooltiptext">SafeZones Peer Facilitation</span></li>
+						<li class="tooltip"><a target="_blank" href="https://www.facebook.com/ASTwustl/"><span class="fas fa-landmark"></span>All Student Theatre Group</a><span class="tooltiptext">All Student Theatre Group</span></li>
+
+						<h2>Publications/Patents</h2>
+
+						<li class="tooltip"><a target="_blank" href="https://agu.confex.com/agu/fm17/meetingapp.cgi/Paper/234892"><span class="fas fa-brain"></span>AGU Paper</a><span class="tooltiptext">AI Publication</span></li>
 						<li class="tooltip"><a target="_blank" href="https://drive.google.com/file/d/11PJpjcx6fXmk15WkKDdiEdoMjxgYYqAk/view"><span class="fas fa-low-vision"></span>Room Navigation Patent</a><span class="tooltiptext">Room Navigation Patent</span></li>
-						<li class="tooltip"><a onclick="theaterModal(event)"><span class="fas fa-theater-masks"></span>Theater Experience</a><span class="tooltiptext">Theater Experience</span></li>
 					</ul>
 
 			<!-- Modal -->
@@ -134,5 +162,36 @@
 		<noscript>
 			<p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101061107ns.gif" /></p>
 		</noscript>
+		<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("click", function() {
+		  	// Hides all other dropdowns
+		  	var coll_ele = document.getElementsByClassName("collapsible");
+		  	var j;
+		  	for (j = 0; j < coll_ele.length; j++) {
+		  		if (this == coll_ele[j]) {
+		  			continue;
+		  		}
+		  		var content = document.getElementById(coll_ele[j].dataset.collap);
+			    if (content.style.maxHeight){
+			      content.style.maxHeight = null;
+			      coll_ele[j].classList.toggle("active");
+			    }
+		  	}
+
+		  	// Shows this dropdown
+		    this.classList.toggle("active");
+		    var content = document.getElementById(this.dataset.collap);
+		    if (content.style.maxHeight){
+		      content.style.maxHeight = null;
+		    } else {
+		      content.style.maxHeight = content.scrollHeight + "px";
+		    } 
+		  });
+		}
+		</script>
 	</body>
 </html>

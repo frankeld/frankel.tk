@@ -1042,17 +1042,17 @@
 }
 .tooltip .tooltiptext {
 	visibility: hidden;
-	width: 120px;
+	width: 180px;
 	background-color: #313f47;
 	color: #fff;
 	text-align: center;
 	border-radius: 6px;
-	padding: 5px 0;
+	padding: 5px 5px;
 	position: absolute;
 	z-index: 1;
 	bottom: 125%;
 	left: 50%;
-	margin-left: -60px;
+	margin-left: -90px;
 	opacity: 0;
 	transition: opacity 0.3s;
 }
@@ -1165,4 +1165,57 @@ ul.actions {
 }
 .icons a {
 	cursor: pointer;
+}
+.icons h2 {
+	margin: 0;
+	margin-top: 0.75em;
+}
+
+.active, .collapsible:hover {
+  border-color: #ff7496;
+}
+
+.collapsible.active {
+	border-color: #ff7496;
+	color: #ff7496;
+}
+
+.content {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+.content div {
+  padding: 5px;
+}
+.content {
+	margin: 0;
+	letter-spacing: normal;
+}
+.content h1 {
+	margin: inherit;
+	letter-spacing: normal;
+}
+.content h2 {
+	padding-top: 15px;
+	margin: inherit;
+	font-weight: 600;
+}
+.content h3 {
+	margin: inherit;
+}
+.content h4 {
+	margin: inherit;
+}
+.content p {
+	text-transform: none;
+	margin: inherit;
+}
+.content a{
+	text-transform: none;
+	padding: 5px 8px;
+	display: inline;
 }
