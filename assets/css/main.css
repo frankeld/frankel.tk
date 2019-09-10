@@ -1189,7 +1189,7 @@ ul.actions {
   border-radius: 4px;
 }
 .content div {
-  padding: 5px;
+  padding: 15px 10px;
 }
 .content {
 	margin: 0;
@@ -1200,7 +1200,7 @@ ul.actions {
 	letter-spacing: normal;
 }
 .content h2 {
-	padding-top: 15px;
+	padding-bottom: 5px;
 	margin: inherit;
 	font-weight: 600;
 }
