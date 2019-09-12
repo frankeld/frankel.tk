@@ -244,32 +244,26 @@
 		</noscript>
 		<script>
 		var coll = document.getElementsByClassName("collapsible");
-		var i;
-
-		for (i = 0; i < coll.length; i++) {
+		var last_opened = null;
+		for (var i = 0; i < coll.length; i++) {
 		  coll[i].addEventListener("click", function() {
-		  	// Hides all other dropdowns
-		  	var coll_ele = document.getElementsByClassName("collapsible");
-		  	var j;
-		  	for (j = 0; j < coll_ele.length; j++) {
-		  		if (this == coll_ele[j]) {
-		  			continue;
-		  		}
-		  		var content = document.getElementById(coll_ele[j].dataset.collap);
-			    if (content.style.maxHeight){
-			      content.style.maxHeight = null;
-			      coll_ele[j].classList.toggle("active");
+		  	// Closes last opened
+		  	if (last_opened) {
+		  		var last_content = document.getElementById(last_opened.dataset.collap);
+		  		last_content.style.maxHeight = null;
+			    last_opened.classList.toggle("active");
+			    if (last_opened == this) {
+			    	last_opened = null;
+			    	return;
 			    }
 		  	}
 
-		  	// Shows this dropdown
-		    this.classList.toggle("active");
-		    var content = document.getElementById(this.dataset.collap);
-		    if (content.style.maxHeight){
-		      content.style.maxHeight = null;
-		    } else {
-		      content.style.maxHeight = content.scrollHeight + "px";
-		    } 
+		  	// Opens current
+		  	last_opened = this;
+		  	this.classList.toggle("active");
+		  	var content = document.getElementById(this.dataset.collap);
+		  	content.style.maxHeight = content.scrollHeight + "px";
+		  	clicky.log('#menu/home','Home');
 		  });
 		}
 		</script>
