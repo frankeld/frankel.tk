@@ -29,6 +29,10 @@
   content: "\e900";
 }
 
+.icon-ArchHacks:after {
+  content: "\e901";
+}
+
 .icon-PICTURE:after {
-  content: "\e903";
+  content: "\e902";
 }
