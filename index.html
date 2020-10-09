@@ -184,7 +184,7 @@
 						</div>
 						<div class="content">
 							<div>
-								<h2>All Student Theatre Treasurer</h1>
+								<h2>All Student Theater Treasurer</h1>
 								<p>Treasurer and former stage manager for WashU's only outdoor theater troupe. Currently producing a fall play and spring show.</p>
 								<a target="_blank" href="https://www.facebook.com/ASTwustl/" class="button">View Social Media</a>
 							</div>
@@ -210,6 +210,26 @@
 							</div>
 						</div>
 
+						<h2>Random</h2>
+
+						<li class="tooltip"><a data-collap="9" class="collapsible"><span class="fas fa-hat-wizard"></span>Wizard Pong</a><span class="tooltiptext">Wizard Pong</span></li>
+						<li class="tooltip"><a data-collap="10" class="collapsible"><span class="fas fa-calendar-plus"></span>dotfiles</a><span class="tooltiptext">dotfiles</span></li>
+
+						<div class="content">
+							<div>
+								<h2>Wizard Pong</h1>
+								<p>A fun take on the classic game from my first foray into video game making. Play it on your Xbox!</p>
+								<a target="_blank" href="https://github.com/frankeld/WizardPong" class="button">View Source</a>
+							</div>
+						</div>
+						<div class="content">
+							<div>
+								<h2>dotfiles</h1>
+								<p>The bash/zsh files that make my terminal (and computer at large) pretty, useful, and fast.</p>
+								<a target="_blank" href="https://github.com/frankeld/dotfiles/blob/master/README.MD" class="button">View Source</a>
+							</div>
+						</div>
+
 					</ul>
 
 			<!-- Modal -->
@@ -227,7 +247,7 @@
 					<h4>Stage Manager</h4>
 
 					<h2>Tales from the Dark</h2>
-					<h3>2019 | WashU All Student Theatre</h3>
+					<h3>2019 | WashU All Student Theater</h3>
 					<h4>Sound Designer</h4>
 
 					<h2>Melancholy Play</h2>
@@ -280,6 +300,7 @@
 			}
 			function theaterModal(event) {
 				document.getElementById('theaterModal').style.display = "block";
+				document.getElementById('theaterModal').children[0].scrollIntoView();
 				event.stopPropagation();
 			}
 			// When the user clicks anywhere, close the modal
